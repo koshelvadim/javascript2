@@ -29,7 +29,6 @@ const formEl = document.querySelector("form");
 const inputForm = document.querySelector("input.form-control");
 const selectForm = document.querySelector("select.form-control");
 const btnSubmite = document.querySelector(".submit");
-const formControl = document.querySelectorAll(".form-control");
 
 formEl.addEventListener("input", function (e) {
   e.target.classList.remove("error");
