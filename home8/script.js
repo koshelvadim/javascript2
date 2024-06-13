@@ -25,37 +25,108 @@ btnEl.addEventListener("click", () => {
 // - Если поле пустое, необходимо данное поле подсветить (поставить класс error данному полю).
 // - Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать.
 
+// const formEl = document.querySelector("form");
+// const inputForm = document.querySelector("input.form-control");
+// const selectForm = document.querySelector("select.form-control");
+// const btnSubmite = document.querySelector(".submit");
+
+// formEl.addEventListener("input", function (e) {
+//   e.target.classList.remove("error");
+// });
+
+// btnSubmite.addEventListener("click", function (e) {
+//   checkInput();
+//   checkSelect();
+//   if (checkInput() && checkSelect()) {
+//     formEl.submit();
+//     formEl.reset();
+//     console.log("ok!");
+//   } else {
+//     console.log("false!");
+//   }
+// });
+
+// function checkInput() {
+//   if (inputForm.value.trim() === "") {
+//     inputForm.classList.add("error");
+//     return false;
+//   } else return true;
+// }
+
+// function checkSelect() {
+//   if (selectForm.value === "") {
+//     selectForm.classList.add("error");
+//     return false;
+//   } else return true;
+// }
+
 const formEl = document.querySelector("form");
-const inputForm = document.querySelector("input.form-control");
-const selectForm = document.querySelector("select.form-control");
-const btnSubmite = document.querySelector(".submit");
+const btnSubmit = document.querySelector(".submit");
 
 formEl.addEventListener("input", function (e) {
-  e.target.classList.remove("error");
-});
-
-btnSubmite.addEventListener("click", function (e) {
-  checkInput();
-  checkSelect();
-  if (checkInput() && checkSelect()) {
-    formEl.submit();
-    formEl.reset();
-    console.log("ok!");
-  } else {
-    console.log("false!");
+  if (e.target.classList.contains("form-control")) {
+    if (e.target.value.trim() === "") {
+      e.target.classList.add("error");
+    } else {
+      e.target.classList.remove("error");
+    }
   }
 });
 
-function checkInput() {
-  if (inputForm.value.trim() === "") {
-    inputForm.classList.add("error");
-    return false;
-  } else return true;
+btnSubmit.addEventListener("click", function (e) {
+  e.preventDefault(); // предотвращаем отправку формы по умолчанию
+  const allFieldsValid = checkFormFields();
+  if (allFieldsValid) {
+    formEl.submit(); 
+    formEl.reset();
+    console.log("форма отправлена!");
+  } else {
+    console.log("ошибка отправки");
+  }
+});
+
+function checkFormFields() {
+  let allFieldsValid = true;
+  const formControls = formEl.querySelectorAll(".form-control");
+  formControls.forEach((field) => {
+    if (field.value.trim() === "") {
+      field.classList.add("error");
+      allFieldsValid = false;
+    } else {
+      field.classList.remove("error");
+    }
+  });
+  return allFieldsValid;
 }
 
-function checkSelect() {
-  if (selectForm.value === "") {
-    selectForm.classList.add("error");
-    return false;
-  } else return true;
+
+
+const bd = [
+  {
+    firstname: "Alex",
+    lastname: "Ivanov",
+  },
+  {
+    firstname: "Damir",
+    lastname: "Petrov",
+  },
+];
+
+const divRender = document.querySelector('.block');
+
+function renderCard(element) {
+  return `<div class="card">
+              <div class="card-body">
+                <h4 class="card-title">${element.firstname}</h4>
+                <p class="card-text">${element.lastname}</p>
+                <hr>
+              </div>
+            </div>
+            `;
 }
+
+bd.forEach((element) => {
+  if (element.firstname) {
+    divRender.insertAdjacentHTML("afterbegin", renderCard(element));
+  }
+});
