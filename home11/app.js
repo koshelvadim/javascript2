@@ -57,4 +57,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     data.forEach(el => {
         productItemsEl.insertAdjacentHTML('beforeend', renderItem(el));
     });
+
+    productItemsEl.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (e.target.closest('.products__add-to-cart')) {
+          const item = e.target.closest(".products__item");
+          if (item) {
+            item.remove();
+          }
+        }
+    });
 });
