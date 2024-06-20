@@ -137,8 +137,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  renderBasket();
-
   productItemsEl.addEventListener("click", (e) => {
     e.preventDefault();
 
