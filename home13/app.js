@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const cartItems = document.querySelector(".cart__items");
   const basketUser = "Basket";
   const basket = JSON.parse(localStorage.getItem(basketUser)) || [];
+  const basketCount = document.querySelector(".basket__count");
+  
   renderBasket();
 
   function renderItem(el) {
@@ -131,10 +133,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   function renderBasket() {
     localStorage.setItem(basketUser, JSON.stringify(basket));
     const basketStorage = JSON.parse(localStorage.getItem(basketUser));
+    basketCount.textContent = renderBasketImage(basketStorage);
     cartItems.innerHTML = "";
     basketStorage.forEach((el) => {
       cartItems.insertAdjacentHTML("beforeend", renderCart(el));
     });
+  }
+
+  function renderBasketImage(basketStorage) {
+      const result = basketStorage.reduce((acc, el) => acc + el.quantity, 0);
+      return result;
   }
 
   productItemsEl.addEventListener("click", (e) => {

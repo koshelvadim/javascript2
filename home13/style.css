@@ -20,6 +20,9 @@ body {
 
 .header {
   background-color: #222222;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
 }
 
 .nav {
@@ -39,9 +42,27 @@ body {
   margin-right: 31px;
   padding: 10px;
 }
+
 .nav__link {
+  position: relative;
   margin-right: 33px;
   padding: 10px;
+}
+
+.basket__count {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff6a6a;
+  color: #fff;
+  background: #f16d7f;
 }
 
 .wrapper {
@@ -298,7 +319,7 @@ main {
   grid-template-columns: 2fr 3fr;
   max-width: 650px;
 
-  border: 1px solid rgba(234, 234, 234, 1)
+  border: 1px solid rgba(234, 234, 234, 1);
 }
 
 .cart__item-img {
