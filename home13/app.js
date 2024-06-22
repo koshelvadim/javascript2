@@ -11,13 +11,14 @@ async function fetchData(url) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  
   const data = await fetchData(url1);
   const productItemsEl = document.querySelector("#products-items");
   const cartItems = document.querySelector(".cart__items");
   const basketUser = "Basket";
   const basket = JSON.parse(localStorage.getItem(basketUser)) || [];
   const basketCount = document.querySelector(".basket__count");
-  
+
   renderBasket();
 
   function renderItem(el) {
@@ -99,7 +100,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       renderBasket();
     } else {
       let flag = false;
-
       basket.forEach((item) => {
         if (el.id === item.id && flag === false) {
           flag = true;
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           renderBasket();
         }
       });
-
       if (!flag) {
         basket.push(el);
         renderBasket();
@@ -147,7 +146,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   productItemsEl.addEventListener("click", (e) => {
     e.preventDefault();
-
     if (e.target.closest(".products__item")) {
       const item = e.target.closest(".products__item");
       if (item) {
