@@ -1,0 +1,40 @@
+/* LocalStorageTheme */
+.light-theme {
+  background-color: #fff;
+  color: #000;
+  transition: all 1s ease;
+}
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+  transition: all 1s ease;
+}
+/* LocalStorageTheme */
+
+/* Scroll */
+html {
+  /* scroll-behavior: smooth; */
+}
+/* Scroll */
+
+/* Drag and Drop API */
+.container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.box {
+  border: 3px solid #666;
+  background-color: #ddd;
+  border-radius: 0.5em;
+  padding: 10px;
+  cursor: move;
+}
+.box.over {
+  border: 3px solid red;
+}
+[draggable] {
+  user-select: none;
+}
+/* Drag and Drop API */
