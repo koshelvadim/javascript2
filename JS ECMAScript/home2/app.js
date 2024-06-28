@@ -1,3 +1,4 @@
+"use strict";
 // Задание 1: "Управление библиотекой книг"
 // Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
 // Свойство title (название) - строка, название книги.
@@ -6,21 +7,22 @@
 // Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
 
 class Book {
-    constructor(title, author, pages) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-    }
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+  }
 
-    displayInfo() {
-        console.log(`Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}`);
-    }
+  displayInfo() {
+    console.log(
+      `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}`
+    );
+  }
 }
 
 // Пример использования класса
 const book = new Book("BookName1", "Author1", 123);
 book.displayInfo(); // "Title: BookName1, Author: Author1, Pages: 123"
-
 
 // Задание 2: "Управление списком студентов"
 // Реализуйте класс Student, представляющий студента, со следующими свойствами и методами:
@@ -37,9 +39,7 @@ class Student {
   }
 
   displayInfo() {
-    console.log(
-      `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`
-    );
+    console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
   }
 }
 
