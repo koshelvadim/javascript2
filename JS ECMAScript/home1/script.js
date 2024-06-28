@@ -16,22 +16,24 @@ console.log('min element of array is: ', Math.min(...arr));
 
 function createCounter(count = 0) {
   function increment() {
-    return ++count;
+    ++count;
   }
   function decrement() {
-    return --count;
+    --count;
   }
-  return { increment, decrement };
+  function getCount() {
+    return count;
+  }
+  return { increment, decrement, getCount };
 }
 
 const count1 = createCounter();
-
-console.log(count1.increment()); //1
-console.log(count1.decrement()); //0
-console.log(count1.increment()); //1
-console.log(count1.increment()); //2
-console.log(count1.decrement()); //1
-console.log(count1.decrement()); //0
+count1.increment();//1
+count1.increment();//2
+count1.increment();//3
+count1.decrement();//2
+ 
+console.log(count1.getCount()); //2
 
 // 3) Дополнительное задание, выполняем только если проходили работу с DOM.
 // Напишите рекурсивную функцию findElementByClass, которая принимает корневой
