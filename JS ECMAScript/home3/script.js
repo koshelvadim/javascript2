@@ -36,8 +36,6 @@ employee.displayInfo(); // "Name: John Smith"
 const manager = new Manager("Jane Doe", "Sales");
 manager.displayInfo(); // "Name: John Doe, Department: Sales"
 
-
-
 // Задание 2: "Управление списком заказов"
 
 // Реализуйте класс Product (товар), который имеет следующие свойства и методы:
