@@ -58,22 +58,31 @@ class Product {
 }
 
 class Order {
+  products = [];
+
   constructor(id) {
     this.id = id;
-    this.products = [];
-    this.totalPrice = 0;
   }
 
   addProduct(product) {
     this.products.push(product);
   }
 
+  // getTotalPrice() {
+  //   let totalPrice = 0;
+  //   for (const index in this.products) {
+  //     totalPrice +=
+  //       this.products[index].price * this.products[index].quantity;
+  //   }
+  //   return totalPrice;
+  // }
+  
   getTotalPrice() {
-    for (const index in this.products) {
-      this.totalPrice +=
-        this.products[index].price * this.products[index].quantity;
+    let totalPrice = 0;
+    for (const item of this.products) {
+      totalPrice += item.price * item.quantity;
     }
-    return this.totalPrice;
+    return totalPrice;
   }
 }
 
