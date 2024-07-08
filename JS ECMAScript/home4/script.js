@@ -45,7 +45,7 @@ getUserData(1).then((result) => {
 // Работа должна быть выполнена с API: https://reqres.in/
 
 async function saveUserData(user) {
-  let response = await fetch(url, {
+  const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json;charset=utf-8",
