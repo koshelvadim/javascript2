@@ -4,13 +4,6 @@ const path = require("path");
 const app = express();
 const filePath = path.join(__dirname, "count.json");
 
-const count = {
-  main: 0,
-  about: 0,
-};
-
-fs.writeFileSync(filePath, JSON.stringify(count, null, 2));
-
 
 app.get("/", (req, res) => {
   const dataJson = fs.readFileSync(filePath, "utf-8");
