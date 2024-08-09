@@ -19,12 +19,12 @@ for (let i = 0; i < localStorage.length; i++) {
   divProduct.insertAdjacentElement("beforeend", divReviews);
 
   //заполнение отзывов
-  reviewSet.forEach((element, index) => {
+  reviewSet.forEach((element) => {
     const newReview = document.createElement("div");
     divReviews.insertAdjacentElement("beforeend", newReview);
 
     const reviewText = document.createElement("span");
-    reviewText.textContent = (index+1) + '.' + element + ' ';
+    reviewText.textContent = element;
     newReview.insertAdjacentElement("beforeend", reviewText);
 
     //кнопка удаления

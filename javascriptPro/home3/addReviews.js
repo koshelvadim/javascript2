@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const review = reviewEl.value.trim();
 
     if (product !== "" && review !== "") {
-      const reviews = JSON.parse(localStorage.getItem(product));
+      let reviews = JSON.parse(localStorage.getItem(product));
       if (reviews === null) {
         reviews = [];
       }
