@@ -66,10 +66,10 @@ function createLesson(id, title, time, maxPlayer, player) {
 
   const lessonMaxPlayer = document.createElement("p");
   lessonMaxPlayer.classList.add("m-0");
-  lessonMaxPlayer.innerHTML = `Максимальное количество участников: <span class="lesson-maxPlayer">${maxPlayer}</span>`;
+  lessonMaxPlayer.innerHTML = `Максимальное количество участников: <span class="lesson-maxPlayer fw-bold">${maxPlayer}</span>`;
 
   const lessonPlayer = document.createElement("p");
-  lessonPlayer.innerHTML = `Записано участников: <span class="lesson-player">${player}</span>`;
+  lessonPlayer.innerHTML = `Записано участников: <span class="lesson-player fw-bold text-danger">${player}</span>`;
 
   const addtButton = document.createElement("button");
   addtButton.textContent = "Записаться";
