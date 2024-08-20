@@ -32,13 +32,9 @@ let lessonsData = [
   },
 ];
 
-
 let localStorageLesson = JSON.parse(localStorage.getItem("lessons"));
-if (localStorageLesson === null) {
-    localStorageLesson = lessonsData;
-}
-lessonsData = localStorageLesson;
-
+if (localStorageLesson === null) localStorageLesson = lessonsData;
+else lessonsData = localStorageLesson;
 
 const renderingListLessons = (array) => {
   localStorage.setItem("lessons", JSON.stringify(lessonsData));
