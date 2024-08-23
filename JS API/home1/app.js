@@ -33,8 +33,11 @@ let lessonsData = [
 ];
 
 let localStorageLesson = JSON.parse(localStorage.getItem("lessons"));
-if (localStorageLesson === null) localStorageLesson = lessonsData;
-else lessonsData = localStorageLesson;
+if (localStorageLesson === null) {
+  localStorageLesson = lessonsData;
+} else {
+  lessonsData = localStorageLesson;
+}
 
 const renderingListLessons = (array) => {
   localStorage.setItem("lessons", JSON.stringify(lessonsData));
@@ -85,12 +88,14 @@ function createLesson(id, title, time, maxPlayer, player) {
   }
   deleteButton.classList.add("btn", "mx-1", "btn-danger");
 
-  lessonItem.append(lessonTitle);
-  lessonItem.append(lessonTime);
-  lessonItem.append(lessonMaxPlayer);
-  lessonItem.append(lessonPlayer);
-  lessonItem.append(addtButton);
-  lessonItem.append(deleteButton);
+  lessonItem.append(
+    lessonTitle,
+    lessonTime,
+    lessonMaxPlayer,
+    lessonPlayer,
+    addtButton,
+    deleteButton
+  );
 
   return lessonItem;
 }
