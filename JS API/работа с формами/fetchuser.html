@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch user</title>
+  </head>
+  <body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #user-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .user{
+            width: 100px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+    <h1>Информация о случайных пользователях</h1>
+    <label for="sort-select">Сортировка:</label>
+    <select id="sort-select">
+      <option value="name">По имени</option>
+      <option value="age">По возрасту</option>
+    </select>
+    <div id="user-list"></div>
+
+    <script>
+      const userListElement = document.querySelector("#user-list");
+      const sortSelect = document.querySelector("#sort-select");
+
+      fetch("https://randomuser.me/api/?results=10")
+        .then((response) => response.json()) //преобразуем ответ в формат JSON
+        .then((data) => {
+          let users = data.results; //получаем массив с данными о пользователях
+          console.log(users);
+          
+
+          //вывод списка пользователей
+          renderUserList(users);
+          //обработчик события изменения выбора в селекте
+          sortSelect.addEventListener("change", () => {
+            const selectedOption = sortSelect.value; //получаем выбранный параметр сортировки
+            users = sortUsers(users, selectedOption); //сортируем пользователей по выбранному параметру
+            renderUserList(users); //выводим отсортированный список пользователей
+          });
+        })
+        .catch((error) => console.log(error));
+      //функция вывода списка пользователей
+      function renderUserList(users) {
+        //очищаем список пользователей перед выводом
+        userListElement.innerHTML = "";
+        //создаем HTML для каждого пользователя и добавляем в список
+        users.forEach((user) => {
+          const userElement = createUserElement(user);
+          userListElement.appendChild(userElement);
+        });
+      }
+      //функция для создания элемента пользователя
+      function createUserElement(user) {
+        const userContainer = document.createElement("div");
+        userContainer.classList.add("user");
+
+        const userName = document.createElement("p");
+        userName.textContent = `Name: ${user.name.first} ${user.name.last}`;
+        userContainer.appendChild(userName);
+
+        const userAge = document.createElement("p");
+        userAge.textContent = `Age: ${user.dob.age}`;
+        userContainer.appendChild(userAge);
+
+        const userImg = document.createElement("img");
+        userImg.src = `${user.picture.medium}`;
+        userContainer.appendChild(userImg);
+
+        return userContainer;
+      }
+
+      //функция для сортировки пользователей
+      function sortUsers(users, sortBy) {
+        return users.sort((a, b) => {
+          if (sortBy === "name") {
+            return a.name.first.localeCompare(b.name.first); //сортировка по имени с использованием метода localCompare()
+          } else if (sortBy === "age") {
+            return a.dob.age - b.dob.age;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

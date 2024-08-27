@@ -11,8 +11,8 @@
 // 4. Слайдер должен циклически переключаться между изображениями, то есть после последнего изображения должно отображаться первое, и наоборот.
 // 5. Добавьте стилизацию для слайдера и элементов интерфейса с использованием CSS для улучшения внешнего вида.
 "use strict";
-itemList = document.querySelectorAll(".item-slide");
-btnIndList = document.querySelectorAll(".btn-ind");
+const itemList = document.querySelectorAll(".item-slide");
+const btnIndList = document.querySelectorAll(".btn-ind");
 
 let currentSlideIndex = 0;
 const slideLength = itemList.length;
