@@ -1,0 +1,20 @@
+.card__box {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px;
+}
+.card__title {
+  color: red;
+}
+.card__date {
+  font-weight: bold;
+  font-size: 20px;
+}
+.card__place {
+  font-size: 16px;
+}
