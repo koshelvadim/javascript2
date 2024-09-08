@@ -3,7 +3,7 @@ import Button from "../UI/button/Button";
 import Input from "../UI/input/Input";
 import style from "./postForm.module.css";
 
-function PostForm({create}) {
+function PostForm({create, title}) {
 
     const [post, setPost] = useState({title: '', body: ''});
     const [error, setError] = useState('');
@@ -24,6 +24,7 @@ function PostForm({create}) {
 
     return ( 
     <form className={style.post__form}>
+      <h3 className={style.post__title}>{title}</h3>
         <Input
           value={post.title}
           onChange={(e) => setPost({ ...post, title: e.target.value })}
