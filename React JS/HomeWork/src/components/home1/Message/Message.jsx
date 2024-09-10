@@ -1,4 +1,4 @@
-import s from "./message.module.scss"
+import s from "./message.module.css"
 
 function Message({data}) {
     return ( 

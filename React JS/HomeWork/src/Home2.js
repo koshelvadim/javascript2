@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./app.css";
-import PostList from "./components/PostList/PostList";
-import PostForm from "./components/PostForm/PostForm";
+import "./App.css";
+import PostList from "./components/home2/PostList/PostList";
+import PostForm from "./components/home2/PostForm/PostForm";
 
-function App() {
+function Home2() {
   const [posts, setPosts] = useState([
     { id: 1, title: "Встреча", body: "Деловая встреча по работе" },
     { id: 2, title: "День рождения", body: "Мой день рождения" },
@@ -19,11 +19,11 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="container direction-column">
       <PostForm create={createPost} title={"Форма ввода постов:"} />
       <PostList remove={removePost} posts={posts} title={"Список постов:"} />
     </div>
   );
 }
 
-export default App;
+export default Home2;
