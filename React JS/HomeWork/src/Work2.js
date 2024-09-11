@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-import "./App.css";
 import Greeting from "./components/work2/Greeting";
 import Counter from "./components/work2/Counter";
 import MessageList from "./components/work2/MessageList";
@@ -14,7 +12,7 @@ function Work2() {
 
   return (
     <div className="container">
-      <Greeting name="Nik" age={34} flag={true} />
+      <Greeting name='23' age={34} flag={true} />
       <Counter />
       <MessageList posts={posts} />
     </div>

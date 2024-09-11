@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Greeting({name, age, flag}) {
     return ( 
         <>
@@ -6,6 +8,12 @@ function Greeting({name, age, flag}) {
             <p>{flag ? "Petr" : "Ivan"}</p>
         </>
      );
+}
+
+Greeting.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    flag: PropTypes.bool.isRequired
 }
 
 export default Greeting;
