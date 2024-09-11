@@ -12,7 +12,7 @@ import Work3 from "./Work3";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Work2 />
+    <Home3 />
   </React.StrictMode>
 );
 
