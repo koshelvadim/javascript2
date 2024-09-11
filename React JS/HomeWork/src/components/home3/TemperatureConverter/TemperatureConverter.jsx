@@ -19,7 +19,7 @@ function TemperatureConverter() {
 
   return (
     <div className="TemperatureConverter">
-      <h4>Введите температуру</h4>
+      <h3>Введите температуру для конвертации:</h3>
       <TextField
         label="по шкале Цельсия"
         variant="outlined"
