@@ -1,0 +1,18 @@
+.post__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.post__title {
+  text-align: center;
+}
+
+.post__error{
+    margin-top: 0;
+    padding: 0;
+    color: red;
+}
