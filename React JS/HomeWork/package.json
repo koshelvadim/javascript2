@@ -13,7 +13,10 @@
     "@testing-library/user-event": "^13.5.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
+<<<<<<< HEAD
     "react-bootstrap": "^2.10.4",
+=======
+>>>>>>> da1c0e1217f480ee92d8634e90e0476433f96536
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.13",

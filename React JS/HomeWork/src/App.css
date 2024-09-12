@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* .container {
     max-width: 800px;
     margin: 10px auto;
@@ -5,20 +6,36 @@
 
 
 .box {
+=======
+.container {
+    margin: 0 auto;
+>>>>>>> da1c0e1217f480ee92d8634e90e0476433f96536
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     margin-bottom: 20px;
+=======
+}
+
+.box {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+>>>>>>> da1c0e1217f480ee92d8634e90e0476433f96536
 }
 
 .direction-column {
     flex-direction: column;
+<<<<<<< HEAD
 }
 
 .card {
     padding: 10px;
     margin: 5px;
     border: 1px solid black;
+=======
+>>>>>>> da1c0e1217f480ee92d8634e90e0476433f96536
 }
