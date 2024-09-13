@@ -9,21 +9,40 @@ import Work1 from "./Work1";
 import Work2 from "./Work2";
 import Work3 from "./Work3";
 import Work4 from "./Work4";
+import Routing from "./components/work4/Routing/Routing";
+import Box from "./components/work4/Children/Box";
+import List from "./components/work4/RenderListFunction/List";
+import Rout from "./components/work4/RouterPages/Rout";
+import Home4 from "./Home4";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const renderItem = (list) => {
+  return (
+    list.map(item => <li key={item.id}>{item.title}</li>)
+  )
+}
+
 root.render(
   <React.StrictMode>
     {/* <Work1 /> */}
     {/* <Work2 /> */}
     {/* <Work3 /> */}
-    <Work4 />
+    {/* <Work4 /> */}
+    {/* <Routing /> */}
     {/* <Home1 /> */}
     {/* <Home2 /> */}
     {/* <Home3 /> */}
+    <Home4 />
+
+    {/* <Box title="1. Children"><h3>Привет React!</h3></Box>
+    <Box title="2. Children"><h3>Привет JavaScript!</h3></Box> */}
+
+    {/* <List renderItem={renderItem}/> */}
+
+    {/* <Rout /> */}
+
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
