@@ -1,0 +1,17 @@
+#box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.light {
+  background: #eee;
+  color: #000;
+}
+.dark {
+  background: #252525;
+  color: #eee;
+}
+

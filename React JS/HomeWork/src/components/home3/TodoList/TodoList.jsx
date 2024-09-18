@@ -8,7 +8,7 @@ import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function ToDoList() {
   const [tasksList, setTasksList] = useState([]); //хранилище Списка Задач

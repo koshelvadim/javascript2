@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Box } from '../Box';
 import { FormControlLabel } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Switch, { SwitchProps } from '@mui/material/Switch';
+import Switch from '@mui/material/Switch';
 
 export const ThemeSwitcher = () => {
 

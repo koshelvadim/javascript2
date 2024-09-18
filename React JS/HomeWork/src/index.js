@@ -14,6 +14,8 @@ import Box from "./components/work4/Children/Box";
 import List from "./components/work4/RenderListFunction/List";
 import Rout from "./components/work4/RouterPages/Rout";
 import Home4 from "./Home4";
+// import App from "./components/work5/App";
+import App from "./components/home5/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -29,14 +31,15 @@ root.render(
     {/* <Work2 /> */}
     {/* <Work3 /> */}
     {/* <Work4 /> */}
+    <App />
     {/* <Routing /> */}
     {/* <Home1 /> */}
     {/* <Home2 /> */}
     {/* <Home3 /> */}
-    <Home4 />
+    {/* <Home4 /> */}
 
     {/* <Box title="1. Children"><h3>Привет React!</h3></Box>
-    <Box title="2. Children"><h3>Привет JavaScript!</h3></Box> */}
+    <Box title="2. Children"><h3>Привет JavaScript!</h3></Box>  */}
 
     {/* <List renderItem={renderItem}/> */}
 
