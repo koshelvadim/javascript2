@@ -14,8 +14,8 @@ import reportWebVitals from "./reportWebVitals";
 // import List from "./components/work4/RenderListFunction/List";
 // import Rout from "./components/work4/RouterPages/Rout";
 // import Home4 from "./Home4";
-import App from "./components/work6/Todo/App";
-// import App from "./components/work5/App";
+// import App from "./components/work6/Counter2/App";
+import App from "./components/home6/ProductCatalog/App";
 // import App from "./components/home5/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
