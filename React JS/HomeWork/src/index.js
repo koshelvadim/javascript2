@@ -17,6 +17,7 @@ import reportWebVitals from "./reportWebVitals";
 // import App from "./components/work6/Counter2/App";
 import App from "./components/home6/ProductCatalog/App";
 // import App from "./components/home5/App";
+// import App from "./components/work7/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

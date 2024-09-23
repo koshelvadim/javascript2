@@ -20,7 +20,7 @@ const ProductList = () => {
 
   return (
       <div className='container'>
-      {products.length === 0 ? <h2 key={Date.now()}>Продукты отсутствуют</h2> : <h2>Продукты</h2>}
+      {products.length === 0 ? <h2>Продукты отсутствуют</h2> : <h2>Продукты</h2>}
         <div className='d-flex flex-wrap'>
           {products.map((product) => 
           (updateProductId === product.id ? 
