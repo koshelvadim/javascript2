@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+// import { Provider } from "react-redux";
 // import Home1 from "./Home1";
 // import Home2 from "./Home2";
 // import Home3 from "./Home3";
@@ -15,9 +16,13 @@ import reportWebVitals from "./reportWebVitals";
 // import Rout from "./components/work4/RouterPages/Rout";
 // import Home4 from "./Home4";
 // import App from "./components/work6/Counter2/App";
-import App from "./components/home6/ProductCatalog/App";
+// import App from "./components/home6/ProductCatalog/App";
 // import App from "./components/home5/App";
-// import App from "./components/work7/App";
+// import AppRedux from "./components/work8/App";
+// import AppHome7 from "./components/home7/AppHome7";
+// import  store from "./components/work7-1/store/store"
+// import AppWork71 from "./components/work7-1/App";
+import AppHome7 from "./components/home7/AppHome7";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -33,7 +38,6 @@ root.render(
     {/* <Work2 /> */}
     {/* <Work3 /> */}
     {/* <Work4 /> */}
-    <App />
     {/* <Routing /> */}
     {/* <Home1 /> */}
     {/* <Home2 /> */}
@@ -46,6 +50,11 @@ root.render(
     {/* <List renderItem={renderItem}/> */}
 
     {/* <Rout /> */}
+    {/* <Provider store={store}>
+      <AppWork71 />
+    </Provider> */}
+    {/* <AppRedux /> */}
+    < AppHome7 />
 
   </React.StrictMode>
 );
