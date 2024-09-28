@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import { Provider } from "react-redux";
+import { Provider } from "react-redux";
 // import Home1 from "./Home1";
 // import Home2 from "./Home2";
 // import Home3 from "./Home3";
@@ -22,7 +22,10 @@ import reportWebVitals from "./reportWebVitals";
 // import AppHome7 from "./components/home7/AppHome7";
 // import  store from "./components/work7-1/store/store"
 // import AppWork71 from "./components/work7-1/App";
-import AppHome7 from "./components/home7/AppHome7";
+// import AppHome7 from "./components/home7/AppHome7";
+// import AppWork8 from "./components/work8/AppWork8";
+// import { store } from "./components/work8/store/store";
+import AppWork81 from "./components/work8-1/AppWork81";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -54,7 +57,12 @@ root.render(
       <AppWork71 />
     </Provider> */}
     {/* <AppRedux /> */}
-    < AppHome7 />
+    {/* < AppHome7 /> */}
+    {/* <Provider store={store}>
+      <AppWork8/>
+    </Provider> */}
+
+    <AppWork81 />
 
   </React.StrictMode>
 );
