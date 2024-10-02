@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 // import Home2 from "./Home2";
 // import Home3 from "./Home3";
 import reportWebVitals from "./reportWebVitals";
+import App71 from "./components/home71/App71";
 // import Work1 from "./Work1";
 // import Work2 from "./Work2";
 // import Work3 from "./Work3";
@@ -24,8 +25,8 @@ import reportWebVitals from "./reportWebVitals";
 // import AppWork71 from "./components/work7-1/App";
 // import AppHome7 from "./components/home7/AppHome7";
 // import AppWork8 from "./components/work8/AppWork8";
-// import { store } from "./components/work8/store/store";
-import AppWork81 from "./components/work8-1/AppWork81";
+import store from "./components/home71/redux/store";
+// import AppWork81 from "./components/work8-1/AppWork81";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -61,9 +62,11 @@ root.render(
     {/* <Provider store={store}>
       <AppWork8/>
     </Provider> */}
+    <Provider store={store}>
+      <App71 />
+    </Provider>
 
-    <AppWork81 />
-
+    {/* <AppWork81 /> */}
   </React.StrictMode>
 );
 
